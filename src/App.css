@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .Link {
+    @apply text-gray-500 hover:text-rose-500 duration-300;
+  }
+}
+.progress::before {
+  content: "";
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  background-color: #27292a;
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 767px) {
+  .progress::before {
+    height: 32px;
+    width: 32px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+:root {
+  --color-dark: #27292a;
+  --color-darkness: #1f2122;
+  --color-primary: #ec6090;
+  --color-light: white;
+
+  --color-bg-body: var(--color-darkness);
+  --distance-primary: 25px;
+  --padding-primary: var(--distance-primary);
+  --margin-primary: var(--distance-primary);
+  --border-raduis-primary: calc(var(--distance-primary) / 2);
+  --font-weight-bold: 900;
+  --font-weight-light: 400;
+  --font-family-primary: "Poppins", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;900&family=Poppins:wght@300;700&display=swap");
+body {
+  background-color: var(--color-bg-body);
+  font-family: var(--font-family-primary);
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+span {
+  line-height: 1.9;
 }
