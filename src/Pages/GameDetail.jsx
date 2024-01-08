@@ -43,11 +43,11 @@ const GameDetail = () => {
           backgroundRepeat: "no-repeat",
         }}
       ></div>
-      <div className="flex  gap-8 text-gray-600 text-2xl">
+      <div className="flex  items-center gap-8 text-gray-600 text-2xl">
         <h1 className="text-xl md:text-4xl dark:text-white text-zinc-700 font-semibold  my-3">
           {data?.name}
         </h1>
-        <div className="flex items-center mt-4 flex-col md:flex-row gap-3 text-gray-600 text-2xl">
+        <div className="flex items-center mt-2  sm:flex-row gap-3 text-gray-600 text-xl md:text-2xl">
           {data?.Platforms.map(
             (pl) => pl.shortName === "PC" && <FaWindows key={pl.id} />
           )}
@@ -76,7 +76,7 @@ const GameDetail = () => {
         </div>
       </div>
       <div className="flex items-center justify-evenly gap-6 py-3">
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col text-center  items-center text-sm md:text-base">
           {data?.tier === "Mighty" && (
             <FaFaceGrinStars size={50} className="text-red-500" />
           )}
@@ -109,7 +109,9 @@ const GameDetail = () => {
           >
             <p className="z-20">{data?.topCriticScore.toFixed(0)}</p>
           </div>
-          <p className="font-semibold">Top Critic Average</p>
+          <p className="font-semibold text-sm text-center">
+            Top Critic Average
+          </p>
         </div>
         <div className="flex flex-col items-center gap-2">
           <div
@@ -126,7 +128,9 @@ const GameDetail = () => {
           >
             <p className="z-20"> {data?.percentRecommended.toFixed(0)}</p>
           </div>
-          <p className="font-semibold">Critics Recommended</p>
+          <p className="font-semibold text-sm text-center">
+            Critics Recommended
+          </p>
         </div>
       </div>
       <div>

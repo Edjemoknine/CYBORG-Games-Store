@@ -9,18 +9,18 @@ const Card = ({ id, title, img, rate, download }) => {
   const { AddPlayed, AddFavorites } = useContext(GamesContext);
   return (
     <div className="relative group overflow-hidden">
-      <div className="most-popular-item hover:scale-105  duration-500  overflow-hidden">
-        <div className="card-wrapper dark:bg-[#27292a] bg-zinc-100">
-          <div className=" absolute z-50 top-6 duration-300 -left-full group-hover:left-7 flex flex-col gap-2">
+      <div className="most-popular-item hover:scale-105    duration-500  overflow-hidden">
+        <div className="card-wrapper dark:bg-[#27292a] h-[340px] bg-zinc-100">
+          <div className=" text-slate-200 absolute z-50 top-6 duration-300 -left-full group-hover:left-7 flex flex-col gap-2">
             <div
               onClick={() => AddFavorites({ id, title, img, rate, download })}
-              className="bg-black cursor-pointer hover:text-rose-500 duration-300 flex justify-center items-center h-8 w-8 rounded-full"
+              className="bg-black   cursor-pointer hover:text-rose-500 duration-300 flex justify-center items-center h-8 w-8 rounded-full"
             >
               <FaHeartbeat size={20} />
             </div>
             <div
               onClick={() => AddPlayed({ id, img, rate, download, title })}
-              className="hover:text-rose-500 cursor-pointer duration-300 bg-black flex justify-center items-center h-8 w-8 rounded-full"
+              className="  hover:text-rose-500 cursor-pointer duration-300 bg-black flex justify-center items-center h-8 w-8 rounded-full"
             >
               <IoGameControllerOutline size={20} />
             </div>

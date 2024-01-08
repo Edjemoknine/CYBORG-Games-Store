@@ -30,6 +30,9 @@ const Home = () => {
     queryFn: hallOfFame,
     staleTime: 3000000,
   });
+
+  console.log(hall);
+
   const { data: recentlyR } = useQuery({
     queryKey: ["recentlyRealesed"],
     queryFn: recentlyReleased,
@@ -45,8 +48,6 @@ const Home = () => {
     queryFn: ReviewedWeek,
     staleTime: 3000000,
   });
-  // console.log(Popular);
-  // console.log(TodayReviews);
 
   if (isLoading) return <HomeSkeleton />;
   return (
@@ -54,7 +55,12 @@ const Home = () => {
       <Hero images={Popular} isLoading={isLoading} />
       <MostPopilair title={"Most Popular"} cards={<Swip data={Popular} />} />
       <MostPopilair title={"Featured Deals"} cards={<Swip data={upComing} />} />
-      <MostPopilair title={"Hall Of Fame 2023"} cards={<Swip data={hall} />} />
+      {hall && (
+        <MostPopilair
+          title={"Hall Of Fame 2023"}
+          cards={<Swip data={hall} />}
+        />
+      )}
       <MostPopilair
         title={"Recently Released"}
         cards={<Swip data={recentlyR} />}

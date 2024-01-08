@@ -20,6 +20,7 @@ export const UpComingGames = async () => {
 
 export const hallOfFame = async () => {
   const resp = await FetchGames.get("/game/hall-of-fame");
+  console.log(resp.data);
   return await resp.data;
 };
 export const recentlyReleased = async () => {
