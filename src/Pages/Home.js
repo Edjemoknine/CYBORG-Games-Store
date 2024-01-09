@@ -31,7 +31,7 @@ const Home = () => {
     staleTime: 3000000,
   });
 
-  console.log(hall);
+  // console.log(hall);
 
   const { data: recentlyR } = useQuery({
     queryKey: ["recentlyRealesed"],
