@@ -34,10 +34,10 @@ const Swip = ({ data }) => {
           <SwiperSlide key={card.id}>
             <Card
               title={card.name}
-              img={card.images.box.og}
-              rate={card.topCriticScore}
-              download={card.tier}
-              id={card.id}
+              img={card.images.box?.og}
+              rate={card?.topCriticScore}
+              download={card?.tier}
+              id={card?.id}
             />
           </SwiperSlide>
         );
