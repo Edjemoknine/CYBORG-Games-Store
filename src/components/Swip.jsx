@@ -13,9 +13,7 @@ const Swip = ({ data }) => {
       spaceBetween={5}
       loop={true}
       navigation={false}
-      pagination={{
-        clickable: false,
-      }}
+   
       modules={[Pagination]}
       breakpoints={{
         640: {
