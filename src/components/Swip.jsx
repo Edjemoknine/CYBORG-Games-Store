@@ -12,9 +12,9 @@ const Swip = ({ data }) => {
       className="pb-3 sm:pb-10"
       spaceBetween={5}
       loop={true}
-      navigation={true}
+      navigation={false}
       pagination={{
-        clickable: true,
+        clickable: false,
       }}
       modules={[Pagination]}
       breakpoints={{
@@ -22,10 +22,10 @@ const Swip = ({ data }) => {
           slidesPerView: 2,
         },
         768: {
-          slidesPerView: 4,
+          slidesPerView: 3,
         },
         1024: {
-          slidesPerView: 5,
+          slidesPerView: 4,
         },
       }}
     >
