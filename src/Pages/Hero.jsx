@@ -143,7 +143,7 @@ const Hero = () => {
                 Prev
               </button>
               <button className="dark:bg-gray-800 bg-zinc-100 p-2 rounded px-3 font-semibold">
-                {page + 1}
+                {page/20 + 1}
               </button>
               <button
                 disabled={isFetching}
